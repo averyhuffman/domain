@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,25 +7,30 @@
 }
 
 :root {
-  --bg-primary: #0c1220;
-  --bg-secondary: #111827;
-  --bg-card: #1a2235;
-  --orange: #f97316;
-  --orange-dark: #ea580c;
-  --purple: #a855f7;
-  --green: #22c55e;
-  --blue: #3b82f6;
-  --cyan: #06b6d4;
-  --red: #ef4444;
-  --text-primary: #ffffff;
-  --text-secondary: #9ca3af;
-  --border: #1e2d40;
+  /* Exact Figma colors */
+  --bg-page:      #04121C;
+  --bg-panel:     #182328;
+  --orange:       #F47F20;
+  --purple:       #B139E2;
+  --red:          #E84D57;
+  --blue:         #28ABE2;
+  --green:        #1AE069;
+  --gold:         #FABF4A;
+  --separator:    #2E4349;
+  --text-white:   #FFFFFF;
+  --text-dark:    #04121C;
+
+  /* Font families */
+  --font-heading: 'Barlow Condensed', sans-serif;   /* Acumin Pro ExtraCondensed substitute */
+  --font-display: 'Bebas Neue', sans-serif;          /* Prohibition substitute */
+  --font-welcome: 'Oswald', sans-serif;              /* Erbaum substitute */
+  --font-body:    'Barlow Condensed', sans-serif;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  font-family: var(--font-heading);
+  background-color: var(--bg-page);
+  color: var(--text-white);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
@@ -34,6 +39,6 @@ body {
   min-height: 100vh;
 }
 
-button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
-input  { font-family: 'Inter', sans-serif; }
+button { cursor: pointer; border: none; font-family: inherit; }
+input  { font-family: inherit; }
 a      { text-decoration: none; }

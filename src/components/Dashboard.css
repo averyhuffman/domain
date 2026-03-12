@@ -1,9 +1,9 @@
-/* ── Layout ─────────────────────────────────────────────────────────────────── */
+/* ── Dashboard layout ───────────────────────────────────────────────────────── */
 .dashboard {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #0c1220;
+  background: #04121C;
 }
 
 /* ── Header ─────────────────────────────────────────────────────────────────── */
@@ -11,10 +11,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #111827;
-  padding: 0 28px;
-  height: 72px;
-  border-bottom: 1px solid #1e2d40;
+  background: #04121C;
+  padding: 0 24px;
+  height: 64px;
+  border-bottom: 1px solid #2E4349;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -23,121 +23,123 @@
 .dash-header-left {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
+/* Logo: "DYNASTY DOMAIN" text */
 .dash-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
 
+.dash-logo-img {
+  height: 27px;
+  width: auto;
+}
+
+/* Fallback text logo if image fails */
 .dash-logo-text {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 26px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 700;
   letter-spacing: 1px;
+  line-height: 1;
 }
 
 .dash-logo-dynasty {
-  background: linear-gradient(135deg, #ff8c00, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #FABF4A;
   font-style: italic;
 }
 
 .dash-logo-domain {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .dash-header-divider {
   width: 1px;
-  height: 36px;
-  background: #1e2d40;
+  height: 32px;
+  background: #2E4349;
 }
 
+/* "BLUEPRINT DASHBOARD" — Acumin Pro ExtraCondensed 700 → Barlow Condensed 700 */
 .dash-header-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  color: #ffffff;
+  font-size: 33px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 .dash-header-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
+/* "GET A LIVE STREAM BP" — Prohibition → Bebas Neue, gold color, gold border */
 .dash-livestream-btn {
   display: flex;
   align-items: center;
   gap: 8px;
   background: transparent;
-  border: 1.5px solid #f97316;
-  color: #f97316;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+  border: 1.5px solid #FABF4A;
+  color: #FABF4A;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 17px;
   letter-spacing: 1px;
-  padding: 8px 18px;
+  padding: 7px 16px;
   border-radius: 999px;
   transition: background 0.2s;
 }
 
 .dash-livestream-btn:hover {
-  background: rgba(249, 115, 22, 0.1);
+  background: rgba(250, 191, 74, 0.1);
 }
 
-.livestream-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #f97316;
-  animation: pulse 1.5s ease-in-out infinite;
+.livestream-icon {
+  font-size: 13px;
+  color: #FABF4A;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.5; transform: scale(0.8); }
-}
-
+/* "▾ DOMAIN" user menu — Acumin Pro ExtraCondensed → Barlow Condensed */
 .dash-user-menu {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 23px;
+  font-weight: 400;
+  color: #FFFFFF;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 
 .dash-user-avatar {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: #1a2235;
-  border: 1.5px solid #2a3d55;
+  background: #182328;
+  border: 1px solid #2E4349;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .dash-logout {
   background: transparent;
   color: #6b7280;
-  font-size: 14px;
-  padding: 4px 8px;
+  font-size: 13px;
+  padding: 4px 6px;
   border-radius: 4px;
   transition: color 0.2s;
 }
 
 .dash-logout:hover {
-  color: #ef4444;
+  color: #E84D57;
 }
 
 /* ── Body ───────────────────────────────────────────────────────────────────── */
@@ -145,42 +147,50 @@
   display: flex;
   flex: 1;
   gap: 0;
-  max-width: 1400px;
   width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 28px 28px 0;
+  padding: 24px 24px 0;
   align-items: flex-start;
 }
 
 .dash-main {
   flex: 1;
-  padding-right: 28px;
+  padding-right: 24px;
+  min-width: 0;
 }
 
 .dash-sidebar {
-  width: 380px;
+  width: 340px;
   flex-shrink: 0;
 }
 
-/* ── Welcome ────────────────────────────────────────────────────────────────── */
+/* ── Welcome panel ──────────────────────────────────────────────────────────── */
 .dash-welcome {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
+/* "Welcome back," — Erbaum 400 → Oswald 400 */
 .dash-welcome-text {
-  font-size: 40px;
-  font-weight: 700;
-  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  color: #FFFFFF;
   margin-bottom: 6px;
+  line-height: 1.2;
 }
 
+/* "JOE" name in red */
 .dash-welcome-name {
-  color: #f97316;
+  color: #E84D57;
 }
 
 .dash-welcome-sub {
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 14px;
-  color: #9ca3af;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.3px;
 }
 
 /* ── Section headers ────────────────────────────────────────────────────────── */
@@ -188,60 +198,63 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
+/* "MY BLUEPRINTS" / "MY INFINITE BLUEPRINTS" — Prohibition → Bebas Neue */
 .section-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 21px;
   letter-spacing: 2px;
+  line-height: 1;
 }
 
-.section-title--orange { color: #f97316; }
-.section-title--purple { color: #a855f7; }
+.section-title--orange { color: #F47F20; }
+.section-title--purple { color: #B139E2; }
 
 .section-icon {
-  font-size: 18px;
+  font-size: 16px;
 }
 
+/* Separator line — #2E4349 */
 .section-divider {
   height: 1px;
-  background: #1e2d40;
-  margin-bottom: 16px;
+  background: #2E4349;
+  margin-bottom: 14px;
 }
 
-/* ── Blueprint grid ─────────────────────────────────────────────────────────── */
+/* ── Blueprint cards grid ───────────────────────────────────────────────────── */
 .bp-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 12px;
 }
 
 .bp-grid--infinite {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* Card background — #182328 */
 .bp-card {
-  background: #1a2235;
-  border: 1px solid #1e2d40;
-  border-radius: 12px;
-  padding: 16px;
+  background: #182328;
+  border: 1px solid #2E4349;
+  border-radius: 8px;
+  padding: 14px 14px 12px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   transition: border-color 0.2s, transform 0.15s;
 }
 
 .bp-card:hover {
-  border-color: #2a3d55;
+  border-color: #F47F20;
   transform: translateY(-2px);
 }
 
 .bp-card-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .bp-card-info {
@@ -250,45 +263,50 @@
   gap: 2px;
 }
 
+/* Card team name — Acumin Pro ExtraCondensed → Barlow Condensed */
 .bp-card-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.2;
 }
 
 .bp-card-date {
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px;
-  color: #6b7280;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
 }
 
+/* DOWNLOAD button */
 .bp-download-btn {
-  background: #111827;
-  border: 1.5px solid #2a3d55;
-  color: #ffffff;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+  background: #04121C;
+  border: 1px solid #2E4349;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
   letter-spacing: 1.5px;
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
   align-self: flex-start;
   transition: border-color 0.2s, background 0.2s;
 }
 
 .bp-download-btn:hover {
-  border-color: #f97316;
-  background: rgba(249, 115, 22, 0.08);
+  border-color: #F47F20;
+  background: rgba(244, 127, 32, 0.1);
 }
 
 /* Infinite card thumbnail */
 .bp-card--infinite .bp-card-header { align-items: flex-start; }
 
 .bp-card-thumb {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
-  background: #0d1a2d;
-  border-radius: 6px;
+  background: #04121C;
+  border-radius: 4px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -298,55 +316,60 @@
 .bp-card-thumb-inner {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 8px;
+  gap: 3px;
+  padding: 6px;
   width: 100%;
 }
 
 .thumb-row {
-  height: 4px;
-  background: #2a3d55;
+  height: 3px;
+  background: #2E4349;
   border-radius: 2px;
 }
 
 .thumb-row--highlight {
-  background: #f97316;
+  background: #F47F20;
   width: 60%;
 }
 
-/* ── Sidebar / Tracker ──────────────────────────────────────────────────────── */
+/* ── Right Sidebar ──────────────────────────────────────────────────────────── */
 .tracker-card {
-  background: #111827;
-  border: 1px solid #1e2d40;
-  border-radius: 14px;
-  padding: 22px 22px 20px;
+  background: #182328;
+  border: 1px solid #2E4349;
+  border-radius: 8px;
+  padding: 18px 18px 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
+/* "BLUEPRINT STATUS TRACKER" — Bebas Neue */
 .tracker-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 21px;
   letter-spacing: 2px;
-  color: #ffffff;
-  border-bottom: 1px solid #1e2d40;
-  padding-bottom: 12px;
+  color: #FFFFFF;
+  border-bottom: 1px solid #2E4349;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .tracker-subtitle {
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #e5e7eb;
+  color: #FFFFFF;
+  letter-spacing: 0.3px;
 }
 
-/* Steps */
+/* Status steps — 4 colored chevron steps */
 .tracker-steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  border-radius: 8px;
+  gap: 3px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
@@ -354,72 +377,93 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 6px;
-  gap: 4px;
-  border-radius: 4px;
-  transition: opacity 0.2s;
+  padding: 8px 4px;
+  gap: 3px;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%, 8px 50%);
+  position: relative;
 }
 
+.tracker-step:first-child {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+}
+
+.tracker-step:last-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 8px 50%);
+}
+
+/* Exact Figma step colors */
+.tracker-step--1 { background: #E84D57; }
+.tracker-step--2 { background: #F47F20; }
+.tracker-step--3 { background: #28ABE2; }
+.tracker-step--4 { background: #1AE069; }
+
+/* Step numbers — Erbaum → Oswald */
 .tracker-step-num {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 28px;
-  font-weight: 800;
-  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  color: #FFFFFF;
   line-height: 1;
 }
 
 .tracker-step-label {
-  font-size: 10px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.85);
-  letter-spacing: 0.5px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.3px;
   text-transform: lowercase;
+  text-align: center;
 }
 
+/* Current status row */
 .tracker-meta {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 }
 
 .tracker-status {
-  display: inline-block;
-  background: #1a2235;
-  border: 1px solid #2a3d55;
-  padding: 6px 14px;
-  border-radius: 999px;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px;
-  color: #e5e7eb;
-  align-self: flex-start;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.3px;
+}
+
+.tracker-status-value {
+  color: #F47F20;
 }
 
 .tracker-updated {
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 11px;
-  color: #6b7280;
+  color: rgba(255,255,255,0.5);
   text-align: right;
 }
 
-/* Action buttons */
+/* BUY A BLUEPRINT + CURRENT WAIT TIME row */
 .tracker-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
+/* BUY A BLUEPRINT — bright green #1AE069, dark text, Bebas Neue */
 .tracker-buy-btn {
-  background: #22c55e;
-  color: #ffffff;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
+  background: #1AE069;
+  color: #04121C;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 23px;
   letter-spacing: 1px;
-  padding: 14px 12px;
-  border-radius: 10px;
+  padding: 12px 10px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   text-align: left;
-  line-height: 1.2;
+  line-height: 1.15;
   transition: opacity 0.2s, transform 0.1s;
 }
 
@@ -429,101 +473,106 @@
 }
 
 .tracker-buy-icon {
-  font-size: 26px;
+  font-size: 22px;
+  flex-shrink: 0;
 }
 
+/* CURRENT WAIT TIME — blue #28ABE2 background */
 .tracker-wait {
-  background: #1e3a5c;
-  border-radius: 10px;
-  padding: 14px 12px;
+  background: #28ABE2;
+  border-radius: 8px;
+  padding: 12px 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .tracker-wait-clock {
-  font-size: 28px;
+  font-size: 24px;
+  flex-shrink: 0;
 }
 
 .tracker-wait-label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #93c5fd;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  color: #04121C;
+  line-height: 1.2;
 }
 
 .tracker-wait-time {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 26px;
-  font-weight: 800;
-  color: #ffffff;
+  letter-spacing: 1px;
+  color: #04121C;
   line-height: 1;
 }
 
-/* Link buttons */
+/* SUBMIT A TICKET + DYNASTY COMMUNITY */
 .tracker-links {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 .tracker-link-btn {
   flex: 1;
   background: transparent;
-  border: 1.5px solid #2a3d55;
-  color: #e5e7eb;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
+  border: 1px solid #2E4349;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
   letter-spacing: 1px;
-  padding: 9px 12px;
+  padding: 8px 10px;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
   transition: border-color 0.2s, background 0.2s;
 }
 
 .tracker-link-btn:hover {
-  border-color: #f97316;
-  background: rgba(249, 115, 22, 0.07);
+  border-color: #F47F20;
+  background: rgba(244, 127, 32, 0.08);
 }
 
-/* ── Resources section ──────────────────────────────────────────────────────── */
+/* ── Learning & Resources section ───────────────────────────────────────────── */
 .resources-section {
-  border-top: 1px solid #1e2d40;
-  padding-top: 16px;
+  border-top: 1px solid #2E4349;
+  padding-top: 14px;
 }
 
+/* "LEARNING & RESOURCES" — Bebas Neue */
 .resources-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 800;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 21px;
   letter-spacing: 2px;
-  color: #ffffff;
-  margin-bottom: 12px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* ── Carousel ───────────────────────────────────────────────────────────────── */
+/* ── Resource Carousel ──────────────────────────────────────────────────────── */
 .carousel {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .carousel-track {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 8px;
   overflow: hidden;
 }
 
 .carousel-item {
-  border-radius: 8px;
-  padding: 14px 12px 10px;
-  min-height: 100px;
+  border-radius: 6px;
+  padding: 10px 10px 8px;
+  min-height: 90px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -531,52 +580,54 @@
   transition: opacity 0.2s;
   position: relative;
   overflow: hidden;
+  background: #0A1E28;
 }
 
 .carousel-item::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 65%);
 }
 
 .carousel-item:hover { opacity: 0.88; }
 
 .carousel-label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  color: #f97316;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  color: #F47F20;
   letter-spacing: 1px;
   position: relative;
   z-index: 1;
+  line-height: 1.2;
 }
 
 .carousel-sublabel {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 11px;
-  color: #9ca3af;
-  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.5px;
   position: relative;
   z-index: 1;
 }
 
 .carousel-caption {
-  font-size: 10px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.7);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.65);
   letter-spacing: 0.5px;
-  margin-top: 4px;
+  margin-top: 3px;
   position: relative;
   z-index: 1;
 }
 
 .carousel-arrow {
-  background: #1a2235;
-  border: 1px solid #2a3d55;
-  color: #9ca3af;
-  width: 28px;
-  height: 28px;
+  background: #182328;
+  border: 1px solid #2E4349;
+  color: rgba(255,255,255,0.6);
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   font-size: 18px;
   display: flex;
@@ -589,8 +640,8 @@
 }
 
 .carousel-arrow:hover:not(:disabled) {
-  color: #f97316;
-  border-color: #f97316;
+  color: #FFFFFF;
+  border-color: #F47F20;
 }
 
 .carousel-arrow:disabled {
@@ -601,18 +652,20 @@
 /* ── Footer ─────────────────────────────────────────────────────────────────── */
 .dash-footer {
   text-align: center;
-  padding: 20px;
+  padding: 18px;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px;
-  color: #4b5563;
-  border-top: 1px solid #1e2d40;
-  margin-top: 32px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.4);
+  border-top: 1px solid #2E4349;
+  margin-top: 28px;
 }
 
 /* ── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .dash-body {
     flex-direction: column;
-    padding: 20px;
+    padding: 18px;
   }
   .dash-main { padding-right: 0; }
   .dash-sidebar { width: 100%; }

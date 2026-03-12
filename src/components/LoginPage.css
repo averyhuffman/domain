@@ -1,65 +1,74 @@
+/* Login page — exact Figma specs from BP Module Login page */
+
 .login-bg {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #0c1220;
+  /* Blueprint data grid pattern to simulate the sports stats background */
+  background-color: #04121C;
   background-image:
     repeating-linear-gradient(
       0deg,
       transparent,
-      transparent 59px,
-      rgba(30, 45, 64, 0.4) 60px
+      transparent 39px,
+      rgba(40, 171, 226, 0.06) 40px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
-      transparent 59px,
-      rgba(30, 45, 64, 0.4) 60px
+      transparent 39px,
+      rgba(40, 171, 226, 0.06) 40px
     );
   overflow: hidden;
 }
 
+/* Radial vignette overlay */
 .login-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(12, 18, 32, 0.6) 0%, rgba(12, 18, 32, 0.95) 70%);
+  background: radial-gradient(ellipse at center, rgba(4, 18, 28, 0.4) 0%, rgba(4, 18, 28, 0.88) 75%);
   pointer-events: none;
 }
 
+/* Login card — rgba(4, 18, 28, 0.59) bg, rgba(255,255,255,0.5) border, 23px radius */
 .login-card {
   position: relative;
   z-index: 1;
-  background: rgba(17, 24, 39, 0.95);
-  border: 1px solid rgba(249, 115, 22, 0.25);
-  border-radius: 16px;
-  padding: 40px 48px 48px;
+  background: rgba(4, 18, 28, 0.82);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 23px;
+  padding: 36px 44px 44px;
   width: 100%;
-  max-width: 480px;
+  max-width: 390px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(249, 115, 22, 0.1);
+  gap: 14px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.7);
 }
 
+/* Logo area */
 .login-logos {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 4px;
+  gap: 10px;
+  margin-bottom: 2px;
 }
 
 .login-logo-goose {
-  height: 60px;
+  height: 56px;
   width: auto;
 }
 
 .login-logo-divider {
-  color: #9ca3af;
-  font-size: 20px;
-  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 .login-logo-shield {
@@ -68,95 +77,109 @@
   justify-content: center;
 }
 
+/* "BLUEPRINT DASHBOARD LOGIN" — Bebas Neue */
 .login-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: #ffffff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
   text-align: center;
+  line-height: 1;
 }
 
+/* Subtitle — italic, light color */
 .login-subtitle {
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px;
-  color: #9ca3af;
+  font-weight: 400;
+  color: rgba(255,255,255,0.65);
   text-align: center;
   font-style: italic;
   line-height: 1.5;
-  max-width: 320px;
+  max-width: 300px;
 }
 
+/* Form */
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .login-field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .login-field label {
-  font-size: 14px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
   font-weight: 500;
-  color: #e5e7eb;
+  color: #FFFFFF;
+  letter-spacing: 0.3px;
 }
 
 .login-field input {
-  background: #1f2d42;
-  border: 1px solid #2a3d55;
+  background: rgba(4, 18, 28, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  padding: 12px 16px;
-  color: #ffffff;
-  font-size: 14px;
+  padding: 11px 14px;
+  color: #FFFFFF;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
   outline: none;
   transition: border-color 0.2s;
 }
 
 .login-field input::placeholder {
-  color: #4b5563;
+  color: rgba(255,255,255,0.3);
 }
 
 .login-field input:focus {
-  border-color: #f97316;
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+  border-color: #F47F20;
+  box-shadow: 0 0 0 2px rgba(244, 127, 32, 0.15);
 }
 
 .login-error {
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px;
-  color: #ef4444;
+  color: #E84D57;
   text-align: center;
 }
 
+/* "Need help?" — blue #28ABE2 */
 .login-help {
-  font-size: 13px;
-  color: #3b82f6;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #28ABE2;
   text-align: right;
   cursor: pointer;
   transition: color 0.2s;
+  align-self: flex-end;
 }
 
 .login-help:hover {
-  color: #60a5fa;
+  color: #5ABFE8;
 }
 
+/* SIGN IN button — DD Orange #F47F20, border-radius 12px, Barlow Condensed 700 */
 .login-btn {
-  background: linear-gradient(135deg, #ff8c00, #f97316);
-  color: #ffffff;
+  background: #F47F20;
+  color: #04121C;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 17px;
+  font-weight: 700;
   letter-spacing: 2px;
-  padding: 14px;
-  border-radius: 8px;
+  padding: 11px 14px;
+  border-radius: 12px;
   width: 100%;
   transition: opacity 0.2s, transform 0.1s;
-  margin-top: 4px;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  margin-top: 2px;
+  text-transform: uppercase;
 }
 
 .login-btn:hover:not(:disabled) {

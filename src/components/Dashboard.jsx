@@ -25,10 +25,10 @@ const RESOURCES = [
 ]
 
 const STATUS_STEPS = [
-  { num: 1, label: 'submitted', color: '#ef4444',  active: true  },
-  { num: 2, label: 'queued',    color: '#f97316',  active: true  },
-  { num: 3, label: 'in progress', color: '#60a5fa', active: false },
-  { num: 4, label: 'sent',      color: '#22c55e',  active: false },
+  { num: 1, label: 'submitted',   cls: 'tracker-step--1' },
+  { num: 2, label: 'queued',      cls: 'tracker-step--2' },
+  { num: 3, label: 'in progress', cls: 'tracker-step--3' },
+  { num: 4, label: 'sent',        cls: 'tracker-step--4' },
 ]
 
 // ─── Shield icon ───────────────────────────────────────────────────────────────
@@ -94,11 +94,7 @@ function StatusTracker() {
 
       <div className="tracker-steps">
         {STATUS_STEPS.map((step) => (
-          <div
-            key={step.num}
-            className="tracker-step"
-            style={{ background: step.active ? step.color : '#1e3a5c' }}
-          >
+          <div key={step.num} className={`tracker-step ${step.cls}`}>
             <span className="tracker-step-num">{step.num}</span>
             <span className="tracker-step-label">{step.label}</span>
           </div>
@@ -107,7 +103,7 @@ function StatusTracker() {
 
       <div className="tracker-meta">
         <span className="tracker-status">
-          Current status: <strong style={{ color: '#f97316' }}>QUEUED</strong>
+          Current status: <span className="tracker-status-value">QUEUED</span>
         </span>
         <span className="tracker-updated">Last updated 10/23/2025 11:58PM EST</span>
       </div>
