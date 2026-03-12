@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary: #0c1220;
+  --bg-secondary: #111827;
+  --bg-card: #1a2235;
+  --orange: #f97316;
+  --orange-dark: #ea580c;
+  --purple: #a855f7;
+  --green: #22c55e;
+  --blue: #3b82f6;
+  --cyan: #06b6d4;
+  --red: #ef4444;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --border: #1e2d40;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
+input  { font-family: 'Inter', sans-serif; }
+a      { text-decoration: none; }
